@@ -49,16 +49,19 @@ nav{
   align-items: center;
 }
 .language-button{
-  color: white;
   display: inline-flex;
   background: transparent;
   border: 1px solid white;
 }
-.language-button select{
+.langs{
   color: white;
   background:none;
   border: none;
   outline: none;
+}
+.langs option{
+  color: black;
+  font-size: 15px;
 }
 .language-button:focus{
   border: solid 3px white;
