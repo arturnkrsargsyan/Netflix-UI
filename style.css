@@ -29,27 +29,39 @@
     padding: 10px 0;  
     margin-right: 15%;
   }
-  nav button{
+  .nav-btn{
     font-weight: 500;
     border: 0;
     outline: 0;
     background: red;
     color: white;
-    padding: 8px 20px;
+    padding: 7px 20px;
     font-size: 12px;
     margin-left: 15px; 
     border-radius: 4px;
     cursor: pointer;
+    align-items: center;
   }
   .signin-btn{
     text-align: center;
     padding-top: 13px;
+    color: white;
+    align-items: center;
   }
   .language-button{
+    color: white;
     display: inline-flex;
-    align-items: center;
     background: transparent;
     border: 1px solid white;
+  }
+  .language-button select{
+    color: white;
+    background:none;
+    border: none;
+    outline: none;
+  }
+  .language-button:focus{
+    border: solid 3px white;
   }
   .language-button img{
     width: 15px;
@@ -124,6 +136,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 50px 0;
+    margin-bottom: -30px;
   }
   .text-col{
     flex-basis: 50%;
@@ -176,13 +189,13 @@
     cursor: pointer;
     position: relative;
   }
-  label::after{
+  .accordion label::after{
     content: '+';
     font-size: 34px;
     position: absolute;
     right: 25px;
   }
-  input[type="radio"]{
+  .accordion input[type="checkbox"]{
     display: none;
   }
   .accordion .content{
@@ -191,15 +204,15 @@
     padding: 0 20px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s, padding  0.4s ;
+    transition: max-height 0.2s, padding  0.2s ;
   }
-  .accordion input[type="radio"]:checked + label + .content{
+  .accordion input[type="checkbox"]:checked + label + .content{
     max-height: 600px;
     padding: 30px 20px;
   
   }
-  .accordion input[type="radio"]:checked + label::after{
-    transform: rotate(45deg);
+  .accordion input[type="checkbox"]:checked + label::after{
+    transform: rotate(-45deg);
   }
   .faq .signup{
     max-width: 600px;
@@ -233,39 +246,6 @@
     font-size: 14px;
     margin-bottom:10px  ;
   }
-  
-  /* .field-holder{
-    position: relative;
-    margin-bottom: 1.25em;
+  .row .nav-btn{
+    margin-left: -2px;
   }
-  input{
-    border: 0;
-    border-bottom: 3px solid white;
-  }
-  label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 1em;
-    color: #424242;
-    display: flex;
-    align-items: center;
-    cursor: text;
-    transition: .3s ease-in-out;
-  }
-  input,label{
-    font-size: 1em;
-    width: 100%;
-    height: 55px;
-  }
-  input:valid + label,
-  input:focus + label{
-    color: #424242;
-    font-size: .75em;
-    top: -25px;
-    pointer-events: none;
-  }
-  input:valid,
-  input:focus{
-    border-bottom: 3px solid #424242;
-  } */
